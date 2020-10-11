@@ -1,0 +1,3 @@
+Vue为MVVM框架，当数据模型data变价时，页面视图会得到相应更新
+
+原理：对data的getter/setter进行拦截(Object.defineProperty或者Proxy)，利用发布订阅的设计模式，在getter方法中进行订阅，在setter方法中发布通知，让所有订阅者完成响应。
